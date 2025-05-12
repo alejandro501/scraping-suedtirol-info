@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=64.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "suedtirol-scraper"
+version = "0.1.0"
+description = "Scraper for Südtirol accommodation data"
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.28.0",
+    "beautifulsoup4>=4.11.0",
+    "pydantic>=2.0",
+    "lxml>=4.9.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "black", "mypy"]
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.setuptools]
+packages = ["scraper", "config"]

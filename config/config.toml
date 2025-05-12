@@ -1,0 +1,16 @@
+[scraper]
+max_pages = 1000000    # Maximum number of pages to scrape
+request_timeout = 10   # Request timeout in seconds
+delay = 1.0           # Delay between requests in seconds
+url_pattern = "/unterkunft/pdp-unterkunft."
+chunk_size = 50
+
+
+[urls]
+sitemap = "https://www.suedtirol.info/de/de.sitemap.xml"
+base_url = "https://www.suedtirol.info/de/de/unterkuenfte/plp/suedtirol"
+accommodation_class = "accommodation-wrapper js__accommodation-wrapper"
+
+[output]
+csv_file = "data/suedtirol_accommodations.csv"
+emails_file = "data/emails.txt"
